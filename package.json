@@ -1,6 +1,6 @@
 {
   "name": "microbundle-package-react-template",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -18,31 +18,26 @@
     }
   },
   "scripts": {
-    "lint": "eslint src --color",
+    "lint": "eslint --ext .ts,.tsx src --color",
     "size": "npm run build && size-limit",
     "check-types": "tsc --noEmit true",
     "build": "del-cli 'dist/*' && microbundle build --entry src/index.ts --jsx React.createElement --name microbundle-package-react-template --css inline --tsconfig tsconfig.build.json"
   },
   "keywords": [],
-  "author": "hunghg255",
-  "license": "ISC",
+  "author": "hunghg255 <giahunghust@gmail.com>",
+  "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "devDependencies": {
+    "@hunghg255/eslint-config-react": "^0.0.8",
     "@size-limit/preset-small-lib": "^8.2.4",
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
-    "@typescript-eslint/eslint-plugin": "^4.17.0",
-    "@typescript-eslint/parser": "^4.17.0",
     "del-cli": "^5.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint": "^8.41.0",
     "microbundle": "^0.15.1",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
@@ -72,5 +67,13 @@
       "import": "{ Hello }",
       "limit": "3 KB"
     }
-  ]
+  ],
+  "homepage": "https://github.com/hunghg255/hunghg255",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hunghg255/hunghg255"
+  },
+  "bugs": {
+    "url": "https://github.com/hunghg255/hunghg255/issues"
+  }
 }
